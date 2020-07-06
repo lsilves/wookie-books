@@ -1,0 +1,55 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@model BookViewModel
+
+
+
+
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Manage Book #@Model._Id</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <form asp-action="UpdateDoc" asp-route-id="@Model._Id">
+                    Title:<br />
+                    <input type="text" name="title" style="width: 15rem" value="@Model.Title" /><br />
+                    Description:<br />
+                    <textarea name="description" style="width: 15rem">@Model.Description</textarea><br />
+                    Price:<br />
+                    <input type="text" name="price" style="width: 15rem" value="@Model.Price" /><br />
+                    CoverImage<br />
+
+                    <input type="text" name="coverImage" style="width: 15rem" value="@Model.CoverImage" /><br />
+                    <div style="margin-top:3.5%">
+                        <input type="submit" value="Update Document" class="btn btn-success" style="width:15rem;" />
+
+                    </div>
+                </form>
+                @if (SignInManager.UserManager.GetUserId(User) == Model.AuthorId)
+                {
+                    <br /><br />
+                    <form asp-action="DeleteDoc"
+                          asp-route-id="@Model._Id"
+                          asp-route-index="@Model.Index"
+                          asp-route-database="wookie_books"
+                          asp-route-collection="books"
+                          asp-route-authorId="@Model.AuthorId">
+                        <input type="submit" value="Delete Document" style="width: 15rem;" class="btn btn-danger" />
+                    </form>
+                }
+            </div>
+
+
+        </div>
+    </div>
+}
+
+
+

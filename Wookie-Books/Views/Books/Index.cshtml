@@ -1,0 +1,56 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@model BooksViewModel
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <h1>Books List</h1>
+        </div>
+        <div class="col-sm-4" style="text-align:center;">
+            <form asp-controller="Books" asp-action="Index" style="margin-left:auto;margin-right:auto;text-align:center;">
+                <p>
+                    Title: <input type="text" name="SearchString">
+                    <input type="submit" value="Filter" />
+                </p>
+            </form>
+        </div>
+        <div class="col-sm-4" style="text-align:right;">
+            @if (SignInManager.IsSignedIn(User))
+            {
+                <a asp-action="NewBook" class="btn btn-success" style="margin-left:auto;">Publish a Book</a>
+            }
+        </div>
+    </div>
+</div>
+
+
+<table class="table">
+    <tr>
+        <th scope="col">Cover Image</th>
+        <th scope="col">Title</th>
+        <th scope="col">Author</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+    </tr>
+    @foreach (var book in Model.BooksList)
+    {
+
+        <tr>
+
+            <td>
+                <img class="book-cover-img" src=@book.CoverImage>
+            </td>
+            <td>
+                <a asp-action="Book"
+                   asp-route-id="@book._Id">
+                    @book.Title
+                </a>
+            </td>
+            <td>@book.Author</td>
+            <td>@book.Description</td>
+            <td>$@book.Price</td>
+        </tr>
+    }
+</table>

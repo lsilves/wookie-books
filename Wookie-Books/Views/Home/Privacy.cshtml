@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+<span>what</span>
+<span>User id to string -> @User.Identity.ToString()</span>
+<span>User id hash code -> @User.Identity.GetHashCode()</span>
+@User.Claims
+@User.Identity.
+<span>Hello @User.Identity.Name</span>
+
+<span>testestestest</span>

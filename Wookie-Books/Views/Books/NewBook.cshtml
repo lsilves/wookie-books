@@ -1,0 +1,21 @@
+﻿@model BookViewModel
+
+<div class="container">
+    <div class="row">
+        <h1>Publish Book</h1>
+    </div>
+    <div class="row">
+        <form asp-action="CreateDoc">
+            Title:<br />
+            <input type="text" name="title" style="width: 15rem" /><br />
+            Description:<br />
+            <textarea name="description" style="width: 15rem"></textarea><br />
+            Price:<br />
+            <input type="text" name="price" style="width: 15rem" /><br />
+            CoverImage<br />
+            <input type="text" name="coverImage" style="width: 15rem" /><br />
+
+            <input type="submit" value="Create New Document" class="btn btn-success" style="margin-top: 10%;width:15rem;" />
+        </form>
+    </div>
+</div>

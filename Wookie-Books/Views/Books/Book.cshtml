@@ -1,0 +1,17 @@
+﻿@model BookViewModel
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4"><img src=@Model.CoverImage class="book-cover-img"></div>
+        <div class="col-sm-8">
+            <h1>
+                @Model.Title
+            </h1>
+            <span><b>Author:</b> @Model.Author</span><br />
+            <span><b>Description:</b> @Model.Description</span><br />
+            <span><b>Price:</b> @Model.Price</span>
+        </div>
+    </div>
+</div>
+<hr />
+<partial name="_EditBook" model="Model"/> <!--model="Model.Document" />-->
