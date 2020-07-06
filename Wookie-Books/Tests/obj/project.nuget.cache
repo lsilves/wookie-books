@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "y/PpOuqnong0QJ0lGIEvuhy/su07GbL/kCuZkiqYLhewIKqp7cw8WzAa7mh1x9IvyxhhF9MhvwYY6UEwWRD/Uw==",
+  "success": true,
+  "projectFilePath": "/Users/user/Projects/Wookie-Books/Wookie-Books/Tests/Tests.csproj",
+  "expectedPackageFiles": [
+    "/Users/user/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/user/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

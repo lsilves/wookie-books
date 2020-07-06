@@ -51,7 +51,7 @@ namespace Wookie_Books
             services.AddControllersWithViews();
            services.AddRazorPages();
 
-            services.Configure<IdentityOptions>(options => // (L:)
+            services.Configure<IdentityOptions>(options =>
             {
                 // Password settings.
                 options.Password.RequireDigit = true;
@@ -72,7 +72,7 @@ namespace Wookie_Books
                 //options.User.RequireUniqueEmail = false;
             });
 
-            services.ConfigureApplicationCookie(options => // (L:)
+            services.ConfigureApplicationCookie(options => 
             {
                 // Cookie settings
                 options.Cookie.HttpOnly = true;

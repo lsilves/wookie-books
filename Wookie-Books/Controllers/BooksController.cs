@@ -50,9 +50,6 @@ namespace Wookie_Books.Controllers
         }
 
 
-
-
-
         public async Task<IActionResult> Book(string id)
         {
             var booksList = new BooksViewModel()
@@ -73,20 +70,11 @@ namespace Wookie_Books.Controllers
         }
 
 
-
-
-
-
-
-
         public IActionResult NewBook() 
         {
             BookViewModel newBook = new BookViewModel();
             return View(newBook);
         }
-
-
-
 
 
         public async Task<IActionResult> CreateDoc(
@@ -105,9 +93,6 @@ namespace Wookie_Books.Controllers
         }
 
 
-
-
-
         public async Task<IActionResult> UpdateDoc(
           string database = "wookie_books",
           string collection = "books",
@@ -121,9 +106,6 @@ namespace Wookie_Books.Controllers
             await _documentService.UpdateDocument(database, collection, id, title, description, coverImage, price);
             return RedirectToAction("Index");
         }
-
-
-
 
 
         public async Task<IActionResult> DeleteDoc(

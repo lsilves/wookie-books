@@ -21,7 +21,7 @@ namespace Wookie_Books.Areas.Identity
 
                 //services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 //    .AddEntityFrameworkStores<ApplicationDbContext>();
-                // (L:) OG!
+                // 
             });
         }
     }

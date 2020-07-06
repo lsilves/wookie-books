@@ -87,6 +87,7 @@ namespace Wookie_Books.Services
             var collection = GetCollection(databaseName, collectionName);
 
             string documentJson = "{\"author\":\" " + userName + "\", \"authorId\":\"" + userId + "\", \"title\":\" " + title + "\", \"description\":\"" + description + "\", \"coverImage\":\" " + coverImage + "\", \"price\":" + price + "}";
+
             BsonDocument newBook = BsonDocument.Parse(documentJson);
 
             BsonDocument document = new BsonDocument();

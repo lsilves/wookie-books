@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+            <GenerateProgramFile>false</GenerateProgramFile>
+
     <UserSecretsId>aspnet-Wookie_Books-5DF4F6D6-0095-46DC-BD1C-FCCC4DCECAF3</UserSecretsId>
     <RootNamespace>Wookie_Books</RootNamespace>
   </PropertyGroup>
@@ -25,6 +27,11 @@
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.5" />
     <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="3.1.5" />
+        
+        
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
   </ItemGroup>
 
   <ItemGroup>

@@ -11,7 +11,7 @@ namespace Wookie_Books.Models
         public string Collection { get; set; }
         public BsonDocument Document { get; set; }
 
-        public List<BsonDocument> Documents { get; set; } // (L:)
+        public List<BsonDocument> Documents { get; set; } 
 
         public int Index { get; set; }
         public long CollectionCount { get; set; }
